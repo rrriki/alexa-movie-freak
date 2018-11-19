@@ -1,0 +1,188 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "movie freak",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "RecommendMovieIntent",
+          "slots": [
+            {
+              "name": "ReleaseYear",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER"
+            },
+            {
+              "name": "ActorOne",
+              "type": "AMAZON.Actor"
+            },
+            {
+              "name": "Director",
+              "type": "AMAZON.Director"
+            },
+            {
+              "name": "ActorTwo",
+              "type": "AMAZON.Actor"
+            }
+          ],
+          "samples": [
+            "Alexa tell movie freak to recommend me a film from {ReleaseYear}",
+            "Alexa ask movie freak for a film with {ActorOne} and {ActorTwo}",
+            "tell me a good movie with {ActorOne}",
+            "give me a {ReleaseYear} film that features {ActorOne}",
+            "give me a film directed by {Director} starring {ActorOne} and {ActorTwo}",
+            "recommend me a movie by {Director} from {ReleaseYear}",
+            "tell me a movie with {ActorOne} from {ReleaseYear}",
+            "give me a film by {Director} from {ReleaseYear}",
+            "recommend me something with {ActorOne} and {ActorTwo}",
+            "recommend me a film from {ReleaseYear}",
+            "tell me a movie with {ActorOne} and {ActorTwo}",
+            "give me a movie with {ActorOne} and {ActorTwo} from {ReleaseYear}",
+            "recommend me a movie with {ActorOne} and {ActorTwo} directed by {Director}",
+            "i want a {ReleaseYear} movie with {ActorOne} and {ActorTwo}",
+            "suggest me something with {ActorOne} and {ActorTwo}",
+            "give me something from {ReleaseYear} by {Director}",
+            "give me a film from {ReleaseYear}",
+            "tell me a {Director} movie",
+            "I want to watch a film with {ActorOne}",
+            "recommend me something with {ActorOne} directed by {Director}",
+            "give me a movie with {ActorOne} and {ActorTwo}",
+            "recommend me a movie from {ReleaseYear}",
+            "suggest me a movie",
+            "give me a movie suggestion",
+            "recommend me a movie"
+          ]
+        },
+        {
+          "name": "SimilarMovieIntent",
+          "slots": [
+            {
+              "name": "Movie",
+              "type": "AMAZON.Movie",
+              "samples": [
+                "similar to {Movie}",
+                "something like {Movie}",
+                "I like {Movie}",
+                "{Movie}"
+              ]
+            }
+          ],
+          "samples": [
+            "Alexa tell movie freak to give me a movie similar to {Movie}",
+            "i want to watch something similar to {Movie}",
+            "i want to watch something like {Movie}",
+            "similar to {Movie}",
+            "like {Movie}",
+            "suggest me a movie like {Movie}",
+            "recommend me something like {Movie}",
+            "tell me of something similar to {Movie}",
+            "do you know of something like {Movie}"
+          ]
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "RecommendMovieIntent",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "ReleaseYear",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            },
+            {
+              "name": "ActorOne",
+              "type": "AMAZON.Actor",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            },
+            {
+              "name": "Director",
+              "type": "AMAZON.Director",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            },
+            {
+              "name": "ActorTwo",
+              "type": "AMAZON.Actor",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            }
+          ]
+        },
+        {
+          "name": "SimilarMovieIntent",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "Movie",
+              "type": "AMAZON.Movie",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.980018983064.48377390573"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1518939586881.299480120211",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what genre do you want to watch?"
+          },
+          {
+            "type": "PlainText",
+            "value": "what type of movies do you like?"
+          },
+          {
+            "type": "PlainText",
+            "value": "what kind of movie are you in the mood for?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.980018983064.48377390573",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Tell me a movie you enjoy and I'll give you a similar one."
+          },
+          {
+            "type": "PlainText",
+            "value": "Tell me a movie you like, and I'll tell you something like that"
+          },
+          {
+            "type": "PlainText",
+            "value": "Let me know which movie you like, and I'll give you something very similar."
+          }
+        ]
+      }
+    ]
+  }
+}

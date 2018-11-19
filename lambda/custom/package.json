@@ -1,0 +1,16 @@
+{
+  "name": "alexa-movie-freak",
+  "version": "1.0.0",
+  "description": "Alexa Skill to recommend movies based on your taste.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ask-sdk-core": "^2.0.0",
+    "ask-sdk-model": "^1.0.0",
+    "axios": "^0.18.0"
+  }
+}

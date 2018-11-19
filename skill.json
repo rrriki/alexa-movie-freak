@@ -1,0 +1,41 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Find movies with your favorite actors, directors and genres.",
+          "examplePhrases": [
+            "Alexa tell movie freak to recommend me a film from 2010",
+            "Alexa ask movie freak for a film with Leonardo DiCaprio and Brad Pitt",
+            "Alexa tell movie freak to give me a movie similar to Memento"
+          ],
+          "keywords": [],
+          "name": "Movie Freak",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/9e13/0057511f27884259b55508feb3502c9b/APP_ICON?versionId=voBogHIKlK6GjBPlDONN08UkMEUtn7fA&AWSAccessKeyId=AKIAJFEYRBGIHK2BBYKA&Expires=1542689707&Signature=p6EkCvYH0eMRzTOWLEr%2FSBEddG4%3D",
+          "description": "Helps you find new interesting movies to watch, based on your favorite actors and directors. \nYou can ask for movies similar to one that you like, or ask by release year, actors and directors.\n\nThis product uses the TMDb API but is not endorsed or certified by TMDb.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/8a7c/408a63a0f495446fba775fa07bb727b2/APP_ICON_LARGE?versionId=CtyuZ8TGqTUjBj51ScWlniDgAX0efd.Y&AWSAccessKeyId=AKIAJFEYRBGIHK2BBYKA&Expires=1542689707&Signature=d3%2FEl4qdLVU0EXk4KiqP%2BifkUTw%3D"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "This Skill uses The Movie Database, an API key is needed to make the requests.",
+      "category": "MOVIE_INFO_AND_REVIEWS",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": ".\\lambda\\custom"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}
